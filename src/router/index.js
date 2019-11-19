@@ -13,6 +13,8 @@ import me from '../views/me/me.vue';
 import product from '../views/product/product.vue';
 import productdetails from '../views/product/productdetails.vue';
 import productseckill from '../views/product/productseckill.vue';
+import shopCart from '../views/order/shopCart.vue';
+import SubmitOrders from '../views/order/SubmitOrders.vue';
 
 
 Vue.use(Router)
@@ -48,6 +50,16 @@ export default new Router({
       name:"productseckill",
       path:"/productseckill",
       component:productseckill
+    },
+    {
+      name:"shopCart",
+      path:"/shopCart",
+      component:shopCart
+    },
+    {
+      name:"SubmitOrders",
+      path:"/SubmitOrders",
+      component:SubmitOrders
     },
     
   ]

@@ -106,7 +106,7 @@
       :sku="sku"
       :goods="goods"
       :goods-id="goodsId"
-      :quota="20"
+      :quota="0"
       :quota-used="30"
       :hide-stock="true"
       show-add-cart-btn
@@ -151,19 +151,19 @@ export default {
             k: "产品规格", // skuKeyName：规格类目名称
             v: [
               {
-                id: "30349", // skuValueId：规格值 id
+                id: "1215", // skuValueId：规格值 id
                 name: "XXL/3包/箱" // skuValueName：规格值名称
               },
               {
-                id: "1215",
+                id: "1216",
+                name: "xL/3包/箱"
+              },
+              {
+                id: "1217",
                 name: "XXL/3包/箱"
               },
               {
-                id: "1215",
-                name: "XXL/3包/箱"
-              },
-              {
-                id: "1215",
+                id: "1218",
                 name: "XXL/3包/箱"
               }
             ],
@@ -178,6 +178,30 @@ export default {
             s2: "1193", // 规格类目 k_s 为 s2 的对应规格值 id
             s3: "0", // 最多包含3个规格值，为0表示不存在该规格
             stock_num: 110 // 当前 sku 组合对应的库存
+          },
+          {
+            id: 2260, // skuId，下单时后端需要
+            price: 100, // 价格（单位分）
+            s1: "1216", // 规格类目 k_s 为 s1 的对应规格值 id
+            s2: "1193", // 规格类目 k_s 为 s2 的对应规格值 id
+            s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+            stock_num: 110 // 当前 sku 组合对应的库存
+          },
+          {
+            id: 2261, // skuId，下单时后端需要
+            price: 100, // 价格（单位分）
+            s1: "1217", // 规格类目 k_s 为 s1 的对应规格值 id
+            s2: "1193", // 规格类目 k_s 为 s2 的对应规格值 id
+            s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+            stock_num: 110 // 当前 sku 组合对应的库存
+          },
+          {
+            id: 2262, // skuId，下单时后端需要
+            price: 100, // 价格（单位分）
+            s1: "1218", // 规格类目 k_s 为 s1 的对应规格值 id
+            s2: "1193", // 规格类目 k_s 为 s2 的对应规格值 id
+            s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+            stock_num: 110 // 当前 sku 组合对应的库存
           }
         ],
 
@@ -186,15 +210,15 @@ export default {
         collection_id: 2261, // 无规格商品 skuId 取 collection_id，否则取所选 sku 组合对应的 id
         none_sku: false, // 是否无规格商品
         messages: [
-          {
-            // 商品留言
-            datetime: "0", // 留言类型为 time 时，是否含日期。'1' 表示包含
-            multiple: "0", // 留言类型为 text 时，是否多行文本。'1' 表示多行
-            name: "留言", // 留言名称
-            type: "text", // 留言类型，可选: id_no（身份证）, text, tel, date, time, email
-            required: "1", // 是否必填 '1' 表示必填
-            placeholder: "" // 可选值，占位文本
-          }
+          // {
+          //   // 商品留言
+          //   datetime: "0", // 留言类型为 time 时，是否含日期。'1' 表示包含
+          //   multiple: "0", // 留言类型为 text 时，是否多行文本。'1' 表示多行
+          //   name: "留言", // 留言名称
+          //   type: "text", // 留言类型，可选: id_no（身份证）, text, tel, date, time, email
+          //   required: "1", // 是否必填 '1' 表示必填
+          //   placeholder: "" // 可选值，占位文本
+          // }
         ],
         hide_stock: false // 是否隐藏剩余库存
       },
